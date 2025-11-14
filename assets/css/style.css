@@ -1,0 +1,175 @@
+assets/css/style.css
+/* ===============================
+   全体リセット
+================================= */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: sans-serif;
+}
+
+/* ===============================
+   ①バックグラウンド
+================================= */
+.background {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../images/baron_cat_bg.webp');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+/* ===============================
+   ②ねこ男爵アイコン（中央）
+================================= */
+/* 中央アイコン用コンテナ（相対配置） */
+.center-icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* 背景スクリーン（120% サイズ、中央揃え） */
+.center-icon .cat-bg {
+    position: absolute;
+    width: 336px;       /* 280px × 1.2 */
+    opacity: 0.55;
+    z-index: 1;
+
+    top: 50%;           /* 中央基準 */
+    left: 50%;
+    transform: translate(-50%, -50%);   /* 完全センタリング */
+}
+
+/* メインのねこ男爵アイコン（前面） */
+.center-icon .cat-main {
+    position: relative;
+    width: 280px;
+    z-index: 2;
+}
+
+/* ===============================
+   ③タイトル（黒透過スクリーン）
+================================= */
+.title-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: fit-content;
+    background: rgba(0,0,0,0.55);
+    padding: 12px 24px;
+    border-radius: 6px;
+
+    margin: 20px auto 0 auto;   /* ← 上方向に20pxの余白を追加して下げる */
+}
+
+/* タイトル文字の調整（必要なら） */
+.title-overlay h1 {
+    margin: 0;                      /* 余計な上下余白排除 */
+    font-size: 32px;                /* 現行と同程度の前提 */
+    font-weight: bold;
+    color: #fff;
+}
+
+/* ===============================
+   ④SNSアイコン群（左側）
+================================= */
+.sns-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 30px; /* 少し余白を増加させて、ボタン位置調整 */
+    gap: 20px;
+    z-index: 10;
+    overflow-y: hidden;  /* スクロールバーを非表示 */
+}
+
+/* SNSアイコン群（縦並び & gap固定） */
+.sns-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+/* SNSアイコンのサイズ設定（最大高40px） */
+.sns-icon {
+    width: auto;
+    height: 40px;
+    transition: transform 0.25s ease; /* ホバリング時のスムーズな変化 */
+}
+
+/* ホバリング時に拡大 */
+.sns-icon:hover {
+    transform: scale(1.12); /* 12%の拡大 */
+}
+
+/* ===============================
+   ⑤PLAYボタン（sns-bar内でセンタリング＋最下部）
+================================= */
+.sns-bar .play-button {
+    margin-top: 30px;  /* 適度に離すだけ */
+}
+#playBtn,
+#stopBtn {
+    width: 75px;          /* プレイボタンのサイズ */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.25s ease;   /* ホバーアニメーション */
+}
+
+#playBtn:hover,
+#stopBtn:hover {
+    transform: scale(1.12);             /* 拡大 */
+}
+
+/* ===============================
+   ⑥右側：note 最新記事カラム（右側固定）
+================================= */
+.right-news {
+    position: fixed;
+    top: 0px;               /* タイトル帯との干渉を避ける */
+    right: 0;
+    width: 345px;            /* 右の柱の左端に合わせる */
+    height: 100vh;           /* 画面高さに合わせる */
+    background: rgba(0,0,0,0.55);
+    padding: 20px 16px;
+    border-radius: 0 0 0 12px;
+    z-index: 50;
+    overflow-y: auto;        /* 記事が多くてもスクロール */
+}
+
+/* 記事カード */
+.news-item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.news-item img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.news-item p {
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.4;
+}
