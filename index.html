@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ねこ男爵公式サイト</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- ===============================
+         バックグラウンド
+    ================================== -->
+    <div class="background"></div>
+
+    <!-- ===============================
+         中央：ねこ男爵アイコン
+    ================================== -->
+    <div class="center-icon">
+        <img src="assets/images/cat-bg.png" alt="ねこ男爵影アイコン" class="cat-bg">
+        <img src="assets/images/cat.png" alt="ねこ男爵アイコン" class="cat-main">
+    </div>
+
+    <!-- ===============================
+         中央タイトル（黒透過スクリーン）
+    ================================== -->
+    <div class="title-overlay">
+        <h1>ねこ男爵公式サイト</h1>
+    </div>
+
+    <!-- ===============================
+         左側：SNSアイコン群 + PLAYボタン
+    ================================== -->
+    <div class="sns-bar">
+
+        <!-- SNSアイコン群 -->
+        <div class="sns-icons">
+            <a href="https://note.com/baron_cat" target="_blank">
+                <img src="assets/images/note.png" class="sns-icon">
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=61582834357150" target="_blank">
+                <img src="assets/images/facebook.png" class="sns-icon">
+            </a>
+
+            <a href="https://www.instagram.com/baron_ginger_cat/" target="_blank">
+                <img src="assets/images/instagram.png" class="sns-icon">
+            </a>
+
+            <a href="https://x.com/Windows27483660" target="_blank">
+                <img src="assets/images/x.png" class="sns-icon">
+            </a>
+
+            <a href="https://www.threads.com/@baron_ginger_cat" target="_blank">
+                <img src="assets/images/threads.png" class="sns-icon">
+            </a>
+
+            <a href="https://lin.ee/iMKEq3n" target="_blank">
+                <img src="assets/images/line.png" class="sns-icon">
+            </a>
+        </div>
+
+        <!-- PLAYボタン -->
+        <div class="play-button">
+            <img src="assets/images/play.png" id="playBtn">
+            <img src="assets/images/stop.png" id="stopBtn" style="display: none;">
+        </div>
+
+    </div>
+
+    <!-- ===============================
+         右側：note 最新記事（黒スクリーン）
+    ================================== -->
+    <div class="right-news" id="rightNews"></div>
+
+    <!-- ===============================
+         オーディオ
+    ================================== -->
+    <audio id="bgm" preload="auto" src="assets/sounds/bolero.mp3"></audio>
+
+    <script src="assets/scripts/script.js"></script>
+</body>
+</html>
