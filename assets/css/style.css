@@ -123,11 +123,11 @@ body, html {
    ⑤PLAYボタン（sns-bar内でセンタリング＋最下部）
 ================================= */
 .sns-bar .play-button {
-    margin-top: 30px;  /* 適度に離すだけ */
+    margin-top: 60px;  /* 適度に離すだけ */
 }
 #playBtn,
 #stopBtn {
-    width: 75px;          /* プレイボタンのサイズ */
+    width: 60px;          /* プレイボタンのサイズ */
     height: auto;
     cursor: pointer;
     transition: transform 0.25s ease;   /* ホバーアニメーション */
